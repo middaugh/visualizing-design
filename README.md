@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## Visualizing Design: An Exploration of the Cooper Hewitt's Poster Collection
 
 You can use the [editor on GitHub](https://github.com/middaugh/visualizing-design/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
