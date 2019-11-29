@@ -37,7 +37,7 @@ Syntax highlighted code block
 ```
 ### First Attempt 
 
-<iframe src="https://middaugh.github.io/visualizing-design/initial_viz.html"></iframe>
+<iframe src="https://middaugh.github.io/visualizing-design/initial_viz.html" width=900, height=400, style="border: 0;"></iframe>
 
 
 ### Jekyll Themes
