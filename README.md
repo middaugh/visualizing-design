@@ -16,6 +16,8 @@ The value of visualization as a means of helping the public understand museum’
 social context of cultural assets in contemporary society”[3]. More and more museums themselves have been trying to find ways to give better access to their collections [4]. Some museums have specifically encouraged people to visualize their collections, such as the Tate Modern, who made their collection available via GitHub, and add links to visualizations that people create [5].
 This interest in ‘cultural analytics’ has grown in recent years, with IPAM Hosting an entire con- ference on it in 2016 [6]. At said conference, Lindsay King gave a fascinating talk on the usage of the Vogue Archive for analytics. Among other things, she mentioned creating a tool that allowed users to filter covers by different colors, allowing people to see how the fashion color trends had changed over time [7]. This is not only a great example of how powerful cultural analytics can be, but also why the CH API is a good data choice; their color mapping palette (which is incorpo- rated into their API) was the basis for what King and her fellow scholars did on the Vogue project. Clearly, museums and scholars alike recognize the value of cultural analytics.
 
+
+
 ```markdown
 Syntax highlighted code block
 
@@ -33,14 +35,10 @@ Syntax highlighted code block
 
 [Link](url) and ![Image](src)
 ```
+### First Attempt 
 
-<table>
-    <tr>
-        <td>Foo</td>
-    </tr>
-</table>
+<iframe src="https://middaugh.github.io/visualizing-design/initial_viz.html"></iframe>
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
 ### Jekyll Themes
 
