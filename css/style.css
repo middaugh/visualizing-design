@@ -1,0 +1,34 @@
+body{
+  //background-image: url('alphabet.jpg');
+  font-family: "Cooper Hewitt", "Roboto", sans-serif;
+
+}
+
+.center-children{
+    text-align:center;
+    margin:auto;
+}
+
+.vis{
+    margin-top: 50px;
+    display:inline-block;
+}
+
+#vis{
+    font-family: "Cooper Hewitt";
+}
+
+#parent_wrapper{
+    position: relative;
+}
+
+#full_poster{
+    position: absolute;
+    top: 150px;
+    left: 150px;
+    width: 250px;
+}
+
+#vg-tooltip-element.vg-tooltip.custom-theme {
+  font-family: "Cooper Hewitt";
+}

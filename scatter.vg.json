@@ -1,0 +1,130 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "width": 1400,
+  "height": 700,
+  "autosize": {
+      "type": "fit",
+      "resize": true
+  },
+  "padding": 5,
+  "signals": [
+  ],
+  "data": [
+    {
+      "name": "source",
+      "url": "./data/clean_data.csv",
+      "format": {
+          "type": "csv"
+      }
+    }
+  ],
+  "config": {
+      "style": {"font": "Cooper Hewitt"},
+        "title": {
+            "fontSize": 45,
+            "font": "Cooper Hewitt",
+            "fontWeight": 700,
+            "anchor": "start"
+        },
+        "axis": {
+            "grid": false
+        },
+        "axisX": {
+            "domainOpacity": 0,
+            "title": null,
+            "ticks": false,
+            "labelOverlap": true,
+            "labelFontSize": 14,
+            "labelPadding": "10",
+            "labelColor": "#AAAAAA",
+            "labelSeparation" : 70,
+            "labelAngle": -45,
+            "labelFont": "Cooper Hewitt"
+        },
+        "axisY": {
+            "domainOpacity": 0,
+            "title": null,
+            "ticks": false,
+            "labelFont": "Cooper Hewitt"
+        }
+    },
+  "scales": [
+    {
+      "name": "x",
+      "type": "linear",
+      "round": true,
+      "nice": true,
+      "zero": false,
+      "domain": {"data": "source", "field": "year"},
+      "range": "width"
+    },
+    {
+      "name": "y",
+      "type": "linear",
+      "round": true,
+      "nice": true,
+      "zero": true,
+      "domain": {"data": "source", "field": "y"},
+      "range": "height"
+    }
+  ],
+  "title": {
+      "text": "Cooper Hewitt Poster Collection"
+  },
+
+  "axes": [
+    {
+      "scale": "x",
+      "grid": false,
+      "domain": false,
+      "orient": "bottom",
+      "tickCount": 5,
+      "title": null,
+      "format": ".4",
+      "labelAngle": -45,
+      "labelFontSize": 15
+    },
+    {
+      "scale": "y",
+      "grid": false,
+      "domain": false,
+      "orient": "left",
+      "titlePadding": 5,
+      "tickCount": 0,
+      "title": null
+    }
+  ],
+
+  "legends": [
+  ],
+  "marks": [
+    {
+      "name": "marks",
+      "type": "symbol",
+      "interactive": true,
+      "from": {"data": "source"},
+      "encode": {
+        "enter": {
+            "size": {"value": 70},
+            "tooltip": {
+                "signal": "{title: datum.title, 'year':  format(datum.year, '.4'),'Designer': datum.designer, 'Gender': datum.designer_gender, 'Country of Origin': datum.country, 'Creditline': datum.creditline, 'Image': '<img src=\"' + datum.image_s + '\" width=\"75\" height=\"75\" style=\"border-radius: 50%;\">,'}"
+          }
+        },
+        "update": {
+          "x": {"scale": "x", "field": "year"},
+          "y": {"scale": "y", "field": "y"},
+          "href": {"field": "url", "type":"nominal"},
+          "shape": {"value": "circle"},
+          "strokeWidth": {"value": 2},
+          "opacity": {"value": 0.7},
+          "fill": {"field": "color", "type":"nominal", "scale": null}
+      },
+      "hover": {
+          "fill": {"field": "color"},
+          "stroke": {"field": "color"}
+      }
+      }
+    }
+]
+
+}
