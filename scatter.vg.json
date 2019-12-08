@@ -26,10 +26,10 @@
     }
   ],
   "config": {
-      "style": {"font": "Cooper Hewitt"},
+      "style": {"font": "Roboto"},
         "title": {
             "fontSize": 45,
-            "font": "Cooper Hewitt",
+            "font": "Roboto",
             "fontWeight": 700,
             "anchor": "start"
         },
@@ -46,13 +46,13 @@
             "labelColor": "#AAAAAA",
             "labelSeparation" : 70,
             "labelAngle": -45,
-            "labelFont": "Cooper Hewitt"
+            "labelFont": "Roboto"
         },
         "axisY": {
             "domainOpacity": 0,
             "title": null,
             "ticks": false,
-            "labelFont": "Cooper Hewitt"
+            "labelFont": "Roboto"
         },
         "scale": {
             "minSize": 2,
