@@ -1,5 +1,5 @@
 {
-  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "$schema": "https://vega.github.io/schema/vega/v5.9.json",
   "width": 1400,
   "height": 700,
   "autosize": {
@@ -8,6 +8,13 @@
   },
   "padding": 5,
   "signals": [
+      { "name": "Color",
+        "value": "color",
+        "bind": {"input": "radio",
+                 "labels": ["by Poster Colors", "by Women Designers", "by Male Designers"],
+                 "options": ["color", "color_female", "color_male"]
+             },
+        "type": "color" }
   ],
   "data": [
     {
@@ -117,11 +124,7 @@
           "shape": {"value": "circle"},
           "strokeWidth": {"value": 2},
           "opacity": {"value": 0.7},
-          "fill": {"field": "color", "type":"nominal", "scale": null}
-      },
-      "hover": {
-          "fill": {"field": "color"},
-          "stroke": {"field": "color"}
+          "fill": {"field": {"signal": "Color"}, "type":"nominal", "scale": null}
       }
       }
     }
