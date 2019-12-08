@@ -8,11 +8,11 @@
   },
   "padding": 5,
   "signals": [
-      { "name": "Color",
+        { "name": "Color",
         "value": "color",
         "bind": {"input": "radio",
-                 "labels": ["by Poster Colors", "by Women Designers", "by Male Designers"],
-                 "options": ["color", "color_female", "color_male"]
+                 "labels": ["by Poster Colors", "by Women Designers", "by Male Designers", "by Unkown Designers"],
+                 "options": ["color", "color_female", "color_male", "color_unknown"]
              },
         "type": "color" }
   ],
@@ -53,6 +53,10 @@
             "title": null,
             "ticks": false,
             "labelFont": "Cooper Hewitt"
+        },
+        "scale": {
+            "minSize": 2,
+            "maxSize": 10
         }
     },
   "scales": [
