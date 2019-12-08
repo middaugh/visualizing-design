@@ -6,7 +6,7 @@ body{
 
 .center-children{
     text-align:center;
-    margin:auto;
+    margin-left: 100;
 }
 
 .vis{
@@ -24,8 +24,8 @@ body{
 
 #full_poster{
     position: absolute;
-    top: 150px;
-    left: 150px;
+    top: 175px;
+    left: 200px;
     width: 250px;
 }
 
