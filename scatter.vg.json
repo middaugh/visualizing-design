@@ -1,12 +1,12 @@
 {
   "$schema": "https://vega.github.io/schema/vega/v5.9.json",
-  "width": 1400,
-  "height": 700,
+  "width": 1000,
+  "height": 600,
   "autosize": {
       "type": "fit",
       "resize": true
   },
-  "padding": 5,
+  "padding": 15,
   "signals": [
         { "name": "Color",
         "value": "color",
@@ -116,7 +116,7 @@
       "from": {"data": "source"},
       "encode": {
         "enter": {
-            "size": {"value": 70},
+            "size": {"value": 60},
             "tooltip": {
                 "signal": "{title: datum.title, 'year':  format(datum.year, '.4'),'Designer': datum.designer, 'Gender': datum.designer_gender, 'Country of Origin': datum.country, 'Creditline': datum.creditline, 'Image': '<img src=\"' + datum.image_s + '\" width=\"75\" height=\"75\" style=\"border-radius: 50%;\">,'}"
           }
