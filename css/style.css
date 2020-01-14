@@ -1,32 +1,36 @@
+html,body { height:100%; }
+
 body{
-  //background-image: url('alphabet.jpg');
+  background-color: white; 
   font-family: "Cooper Hewitt", "Roboto", sans-serif;
+  background-repeat: no-repeat;
+  background-size: cover;
 
 }
 
 .center-children{
     text-align:center;
-    margin-left: 100;
+    background-color: white;
+    width: 1150px;
+    margin: auto;
+    position: relative;
+    padding: 15px;
+
 }
 
-.vis{
-    margin-top: 50px;
-    display:inline-block;
-}
+
 
 #vis{
     font-family: "Roboto";
 }
 
-#parent_wrapper{
-    position: relative;
-}
+
 
 #full_poster{
     position: absolute;
-    top: 175px;
-    left: 200px;
-    width: 250px;
+    top: 125px;
+    left: 100px;
+    width: 225px;
 }
 
 #vg-tooltip-element.vg-tooltip.custom-theme {
