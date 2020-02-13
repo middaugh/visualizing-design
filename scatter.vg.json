@@ -11,7 +11,7 @@
         { "name": "Color",
         "value": "color",
         "bind": {"input": "radio",
-                 "labels": ["by Poster Colors", "by Women Designers", "by Male Designers", "by Unkown Designers"],
+                 "labels": ["by Poster Colors", "by Female Designers", "by Male Designers", "by Unknown Designers"],
                  "options": ["color", "color_female", "color_male", "color_unknown"]
              },
         "type": "color" }
