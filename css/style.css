@@ -1,8 +1,9 @@
 html,body { height:100%; }
 
 body{
-  background-color: white; 
-  font-family: "Cooper Hewitt", "Roboto", sans-serif;
+  background-color: #122932; 
+  color: white; 
+  font-family: "Jost", "Roboto", sans-serif;
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -10,18 +11,18 @@ body{
 
 .center-children{
     text-align:center;
-    background-color: white;
     width: 1150px;
     margin: auto;
+    margin-top: 40px; 
     position: relative;
     padding: 15px;
+    color: white; 
 
 }
 
-
-
 #vis{
-    font-family: "Roboto";
+    font-family: "Jost";
+    margin-top: 40px; 
 }
 
 

@@ -26,10 +26,11 @@
     }
   ],
   "config": {
-      "style": {"font": "Roboto"},
+      "style": {"font": "Jost"},
         "title": {
             "fontSize": 45,
-            "font": "Roboto",
+            "color": "white", 
+            "font": "Jost",
             "fontWeight": 700,
             "anchor": "start"
         },

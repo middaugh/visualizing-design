@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
     <meta charset="utf-8">
@@ -8,50 +9,51 @@
 
     <link rel="stylesheet" href="https://github.com/middaugh/visualizing-design/blob/master/css/fonts/stylesheet.css">
     <!-- Roboto Font -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;700&display=swap" rel="stylesheet">
 
     <!-- Vega Junk -->
-    <script src="https://cdn.jsdelivr.net/npm/vega@5.9"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.0.0-beta.12"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.22.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.5.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.21.0"></script>
 
 
 
 </head>
-
 
 <body>
 
     <div id="parent-wrapper" class="center-children">
         <!-- Placeholder for my plot -->
         <div id="vis" class="vis"></div>
-</div>
-  <script>
+    </div>
+    <script>
 
-var tooltipOptions = {
-sanitize: (value) => (value),
-theme: "custom"
-};
+        var tooltipOptions = {
+            sanitize: (value) => (value),
+            theme: "custom"
+        };
 
-    const spec = "scatter.vg.json";
-    vegaEmbed('#vis', spec, {tooltip: tooltipOptions}).then(function(result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-    result.view.addEventListener('mouseover', function(event, item) {
-        var img = document.createElement("img");
-        img.setAttribute("id", "full_poster");
-        img.src = item.datum['image_b'];
-        var src = document.getElementById("parent-wrapper");
-        src.appendChild(img);
-        console.log(item.datum);
-    });
+        const spec = "scatter.vg.json";
+        vegaEmbed('#vis', spec, { tooltip: tooltipOptions }).then(function (result) {
+            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+            result.view.addEventListener('mouseover', function (event, item) {
+                var img = document.createElement("img");
+                img.setAttribute("id", "full_poster");
+                img.src = item.datum['image_b'];
+                var src = document.getElementById("parent-wrapper");
+                src.appendChild(img);
+                console.log(item.datum);
+            });
 
-    result.view.addEventListener('mouseout', function(event, item) {
-        var old_img = document.getElementById("full_poster");
-        old_img.remove()
-    });
+            result.view.addEventListener('mouseout', function (event, item) {
+                var old_img = document.getElementById("full_poster");
+                old_img.remove()
+            });
 
-  }).catch(console.error);
-  </script>
+        }).catch(console.error);
+    </script>
 </body>
 
 </html>
